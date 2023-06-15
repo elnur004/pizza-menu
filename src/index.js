@@ -69,14 +69,21 @@ const Header = () => {
 };
 
 const Menu = () => {
+  // const pizzas = pizzaData;
+  const pizzas = [];
+  const pizzasNum = pizzas.length;
+
   return (
     <main className="menu">
       <h2>Our Menu</h2>
-      <ul className="pizzas">
-        {pizzaData.map((pizza) => (
-          <Pizza pizzaObj={pizza} key={pizza.name} />
-        ))}
-      </ul>
+
+      {pizzasNum > 0 && (
+        <ul className="pizzas">
+          {pizzas.map((pizza) => (
+            <Pizza pizzaObj={pizza} key={pizza.name} />
+          ))}
+        </ul>
+      )}
 
       {/* <Pizza
         name="Pizza Margherita"
@@ -112,7 +119,7 @@ const Pizza = (props) => {
 
 const Footer = () => {
   const hour = new Date().getHours();
-  const openHour = 2;
+  const openHour = 0;
   const closeHour = 22;
 
   console.log(hour);
