@@ -69,8 +69,8 @@ const Header = () => {
 };
 
 const Menu = () => {
-  // const pizzas = pizzaData;
-  const pizzas = [];
+  const pizzas = pizzaData;
+  // const pizzas = [];
   const pizzasNum = pizzas.length;
 
   return (
